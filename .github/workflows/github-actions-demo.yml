@@ -15,4 +15,21 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: echo "🍏 This job's status is ${{ job.status }}.
+
+      - name: add name to README
+        run: echo "Samarth Jain" >> README.md
+
+      - name: commit changes
+        run:
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add README.md
+          git commit -m "Added name to README"
+
+      - name: push changes
+        run: git push
+  
