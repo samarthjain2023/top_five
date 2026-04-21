@@ -19,7 +19,9 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
       - name: add name to README
-        run: echo "\n###Samarth Jain" >> README.md
+        run: |
+          echo "" >> README.md
+          echo "Samarth Jain" >> README.md
 
       - name: commit changes
         run: |
